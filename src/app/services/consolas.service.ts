@@ -7,7 +7,8 @@ import { Observable, catchError, throwError } from 'rxjs';
 })
 export class ConsolasService {
 
-  baseURI = "https://benc2024.github.io/ConsolaGames/consolas.json"
+  //baseURI = "https://benc2024.github.io/ConsolaGames/consolas.json"
+  baseURI = "http://localhost:3000/listConsolas"
   constructor(private httpClient: HttpClient) { }
 
   getServices(): Observable<any>{
