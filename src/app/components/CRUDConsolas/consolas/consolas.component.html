@@ -1,1 +1,39 @@
-<p>consolas works!</p>
+
+<div class="main-content">
+    <div class="container-fluid">
+      <div class="card">
+          <div class="card-header card-header-danger">
+              <h4 class="card-title">Agregar consola</h4>
+          </div>
+          <div class="card-body">
+              <div id="typography">
+                  <div class="card-title">
+                      <h2>Agregar Consola</h2>
+                  </div>
+                  <div class="row">
+                      <div class="tim-typo">
+
+                        <form> <!--action en form sirve para redireccionar los datos del formulario a una pagina-->
+                            <label for="Nombre">Nombre de la consola: </label>
+                            <input type="text" name="Fabricante" id="Nombre" placeholder="Consola" [(ngModel)]="consola.nombre"><br>
+                            <label for="Fabricante">Fabricante: </label>
+                            <input type="text" name="Fabricante" id="Fabricante" placeholder="Fabricante" [(ngModel)]="consola.fabricante"><br>
+                            <label for="Lanzamiento">Fecha de lanzamiento: </label>
+                            <input type="text" name="Lanzamiento" id="Lanzamiento" placeholder="lanzamiento" [(ngModel)]="consola.lanzamiento"><br>
+                            <label for="Almacenamiento">Almacenamiento: </label>
+                            <input type="text" name="Almacenamiento" id="Almacenamiento" placeholder="Almacenamiento" [(ngModel)]="consola.almacenamiento"><br>
+                            <label for="Precio">Precio: </label>
+                            <input type="number" name="Precio" id="Precio" placeholder="$$$" [(ngModel)]="consola.precio"><br>
+                            <label for="Enlace">Enlace de imagen: </label>
+                            <input type="url" name="Enlace" id="Enlace" placeholder="url" [(ngModel)]="consola.enlaceImagen"><br><br>
+                            <button type="button" (click)="guardarConsola()">Guardar datos</button>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
