@@ -8,9 +8,10 @@ import { ConsolasService } from 'app/services/consolas.service';
 })
 export class TableListComponent implements OnInit {
 
-  public listaConsolas: any[] = [] //REcibe los datos del tipo objeto
+  public listaConsolas: any[] = [] //Recibe los datos del tipo objeto
 
-  constructor( private consolaServicio: ConsolasService ) { }
+  constructor( private consolaServicio: ConsolasService ) {
+   }
 
   async ngOnInit(){ //Inicio asincrono
     this.consolaServicio.getServices().subscribe(
@@ -19,5 +20,6 @@ export class TableListComponent implements OnInit {
        }
     )
  }
+
 
 }

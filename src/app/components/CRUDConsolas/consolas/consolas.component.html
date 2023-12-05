@@ -13,21 +13,40 @@
                   <div class="row">
                       <div class="tim-typo">
 
-                        <form> <!--action en form sirve para redireccionar los datos del formulario a una pagina-->
-                            <label for="Nombre">Nombre de la consola: </label>
-                            <input type="text" name="Fabricante" id="Nombre" placeholder="Consola" [(ngModel)]="consola.nombre"><br>
-                            <label for="Fabricante">Fabricante: </label>
-                            <input type="text" name="Fabricante" id="Fabricante" placeholder="Fabricante" [(ngModel)]="consola.fabricante"><br>
-                            <label for="Lanzamiento">Fecha de lanzamiento: </label>
-                            <input type="text" name="Lanzamiento" id="Lanzamiento" placeholder="lanzamiento" [(ngModel)]="consola.lanzamiento"><br>
-                            <label for="Almacenamiento">Almacenamiento: </label>
-                            <input type="text" name="Almacenamiento" id="Almacenamiento" placeholder="Almacenamiento" [(ngModel)]="consola.almacenamiento"><br>
-                            <label for="Precio">Precio: </label>
-                            <input type="number" name="Precio" id="Precio" placeholder="$$$" [(ngModel)]="consola.precio"><br>
-                            <label for="Enlace">Enlace de imagen: </label>
-                            <input type="url" name="Enlace" id="Enlace" placeholder="url" [(ngModel)]="consola.enlaceImagen"><br><br>
-                            <button type="button" (click)="guardarConsola()">Guardar datos</button>
-                        </form>
+                        <div class="card text-center" style="width: 18rem;">
+                            <div class="card-body">
+                            <h5 class="card-title">Guardar una nueva consola</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                               <li class="list-group-item">
+                                  <label for="Nombre">Nombre de la consola: </label>
+                                     <input type="text" name="Nombre" id="Nombre" placeholder="Consola" [(ngModel)]="consola.nombre">
+                               </li>
+                               <li class="list-group-item">
+                                  <label for="Fabricante">Fabricante: </label>
+                                     <input type="text" name="Fabricante" id="Fabricante" placeholder="Fabricante" [(ngModel)]="consola.fabricante">
+                               </li>
+                               <li class="list-group-item">
+                                  <label for="Lanzamiento">Fecha de lanzamiento: </label>
+                                     <input type="text" name="Lanzamiento" id="Lanzamiento" placeholder="lanzamiento" [(ngModel)]="consola.lanzamiento">
+                               </li>
+                               <li class="list-group-item">
+                                  <label for="Almacenamiento">Almacenamiento: </label>
+                                     <input type="text" name="Almacenamiento" id="Almacenamiento" placeholder="Almacenamiento" [(ngModel)]="consola.almacenamiento">
+                               </li>
+                               <li class="list-group-item">
+                                  <label for="Precio">Precio: </label>
+                                     <input type="number" name="Precio" id="Precio" placeholder="$USD" [(ngModel)]="consola.precio">
+                               <li class="list-group-item">
+                                  <label for="Enlace">Enlace de imagen: </label>
+                                     <input type="text" name="Enlace" id="Enlace" placeholder="url" [(ngModel)]="consola.enlaceImagen">
+                               </li>
+                            </ul>
+                            <div class="card-body">
+                                <button type="button" class="btn btn-primary m-2" (click)="guardarConsola()" routerLink="/table-list">Guardar datos</button>
+                                <button type="button" class="btn btn-danger m-2" routerLink="/table-list">Cancelar</button>
+                            </div>
+                         </div>
                         </div>
                     </div>
                 </div>
@@ -35,5 +54,6 @@
         </div>
     </div>
 </div>
+
 
  

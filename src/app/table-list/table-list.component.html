@@ -26,6 +26,12 @@
                                 <th>
                                     Precio
                                 </th>
+                                <th>
+                                    Año de lanzamiento
+                                </th>
+                                <th>
+                                    
+                                </th>
                             </thead>
                             <tbody>
                                 <tr *ngFor="let valor of listaConsolas, let i = index">
@@ -43,6 +49,9 @@
                                     </td>
                                     <td>
                                         {{valor.precio}}
+                                    </td>
+                                    <td>
+                                        {{valor.lanzamiento}}
                                     </td>
                                 </tr>
                             </tbody>
